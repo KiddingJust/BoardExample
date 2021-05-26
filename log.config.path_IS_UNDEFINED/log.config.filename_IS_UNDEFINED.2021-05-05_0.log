@@ -1,0 +1,649 @@
+INFO  21-05-05 20:07:52[main] [BoardExampleApplicationTests:55] - Starting BoardExampleApplicationTests using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 69288 (started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 20:07:52[main] [BoardExampleApplicationTests:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 20:07:54[main] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 20:07:54[main] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 161 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 20:07:54[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 20:07:55[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 20:07:55[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 20:07:55[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 20:07:55[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 20:07:55[main] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 20:07:56[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+DEBUG 21-05-05 20:07:56[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 20:07:56[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 20:07:56[main] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 19 msec}
+INFO  21-05-05 20:07:57[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 20:07:57[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-05-05 20:07:57[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+WARN  21-05-05 20:07:59[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 20:07:59[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 20:07:59[main] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 20:08:00[main] [BoardExampleApplicationTests:61] - Started BoardExampleApplicationTests in 9.082 seconds (JVM running for 12.221)
+DEBUG 21-05-05 20:08:00[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-05 20:08:01[main] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. select membervo0_.mbr_no as mbr_no1_0_0_, membervo0_.id as id2_0_0_, membervo0_.name as name3_0_0_ from member membervo0_ where membervo0_.mbr_no=2
+ {executed in 14 msec}
+INFO  21-05-05 20:08:01[SpringContextShutdownHook] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 20:08:01[SpringContextShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 20:08:01[SpringContextShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 20:08:01[SpringContextShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 20:27:34[main] [BoardExampleApplicationTests:55] - Starting BoardExampleApplicationTests using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 70932 (started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 20:27:34[main] [BoardExampleApplicationTests:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 20:27:35[main] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 20:27:35[main] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 20:27:35[main] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 20:27:36[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 20:27:36[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 20:27:36[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 20:27:37[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 20:27:37[main] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 20:27:37[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+DEBUG 21-05-05 20:27:37[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 20:27:37[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 20:27:37[main] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 2 msec}
+INFO  21-05-05 20:27:38[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 20:27:38[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-05-05 20:27:38[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+WARN  21-05-05 20:27:40[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 20:27:40[main] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 20:27:40[main] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 20:27:41[main] [BoardExampleApplicationTests:61] - Started BoardExampleApplicationTests in 7.911 seconds (JVM running for 9.479)
+DEBUG 21-05-05 20:27:41[main] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-05 20:27:41[main] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. select membervo0_.mbr_no as mbr_no1_0_0_, membervo0_.id as id2_0_0_, membervo0_.name as name3_0_0_ from member membervo0_ where membervo0_.mbr_no=2
+ {executed in 2 msec}
+INFO  21-05-05 20:27:41[SpringContextShutdownHook] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 20:27:41[SpringContextShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 20:27:42[SpringContextShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 20:27:42[SpringContextShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 20:47:31[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 73264 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 20:47:31[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 20:47:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 20:47:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 20:47:32[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 20:47:32[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 20:47:32[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 20:47:33[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 20:47:33[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 20:47:33[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 20:47:33[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 20:47:34[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 20:47:34[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 20:47:34[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2234 ms
+INFO  21-05-05 20:47:34[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 20:47:34[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 20:47:34[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 20:47:34[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 20:47:34[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 20:47:34[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+DEBUG 21-05-05 20:47:35[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 20:47:35[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 20:47:35[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 7 msec}
+INFO  21-05-05 20:47:35[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 20:47:35[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-05-05 20:47:35[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+WARN  21-05-05 20:47:36[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 20:47:36[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 20:47:36[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 20:47:36[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 20:47:36[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 20:47:36[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 20:47:36[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 5.771 seconds (JVM running for 6.615)
+INFO  21-05-05 20:47:50[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 20:47:50[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 20:47:50[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-05-05 20:47:51[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-05 20:47:51[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. select membervo0_.mbr_no as mbr_no1_0_0_, membervo0_.id as id2_0_0_, membervo0_.name as name3_0_0_ from member membervo0_ where membervo0_.mbr_no=3
+ {executed in 1 msec}
+ERROR 21-05-05 20:47:51[http-nio-8080-exec-1] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at org.gaiga.jpatest.controller.TestJpaRestController.getMember(TestJpaRestController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  21-05-05 21:41:00[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:41:01[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:41:01[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:41:01[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:41:01[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:41:03[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 79576 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:41:03[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:41:03[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:41:03[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:41:03[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:41:04[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:41:04[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:41:04[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:41:04[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:41:04[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:41:04[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:41:05[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:41:05[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:41:05[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1753 ms
+INFO  21-05-05 21:41:05[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:41:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 21:41:05[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:41:05[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:41:05[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:41:05[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:41:05[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:41:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 5 msec}
+INFO  21-05-05 21:41:06[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:41:06[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:41:06[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:41:06[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:41:07[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:41:07[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:41:07[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:41:07[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:41:07[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.582 seconds (JVM running for 5.521)
+INFO  21-05-05 21:41:13[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:41:13[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:41:13[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+DEBUG 21-05-05 21:43:50[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-05 21:43:50[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. select membervo0_.mbr_no as mbr_no1_0_0_, membervo0_.id as id2_0_0_, membervo0_.name as name3_0_0_ from member membervo0_ where membervo0_.mbr_no=2
+ {executed in 2 msec}
+DEBUG 21-05-05 21:43:52[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 4 msec}
+DEBUG 21-05-05 21:43:52[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. select membervo0_.mbr_no as mbr_no1_0_0_, membervo0_.id as id2_0_0_, membervo0_.name as name3_0_0_ from member membervo0_ where membervo0_.mbr_no=3
+ {executed in 1 msec}
+ERROR 21-05-05 21:43:52[http-nio-8080-exec-6] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at org.gaiga.jpatest.controller.TestJpaRestController.getMember(TestJpaRestController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  21-05-05 21:44:10[RMI TCP Connection(3)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:44:10[RMI TCP Connection(3)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:44:10[RMI TCP Connection(3)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:44:10[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:44:10[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:44:12[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 79954 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:44:12[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:44:12[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:44:12[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:44:13[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:44:13[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:44:13[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:44:14[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:44:14[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:44:14[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:44:14[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:44:14[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:44:14[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:44:14[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1547 ms
+INFO  21-05-05 21:44:14[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:44:14[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 21:44:14[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:44:14[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:44:14[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:44:15[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:44:15[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:44:15[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 3 msec}
+INFO  21-05-05 21:44:15[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:44:15[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:44:16[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:44:16[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:44:16[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:44:16[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:44:16[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:44:16[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:44:16[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.265 seconds (JVM running for 4.999)
+INFO  21-05-05 21:44:18[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:44:18[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:44:18[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 21:45:02[RMI TCP Connection(3)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:45:02[RMI TCP Connection(3)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:45:02[RMI TCP Connection(3)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:45:02[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:45:02[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:45:04[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 80057 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:45:04[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:45:04[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:45:04[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:45:05[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:45:05[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:45:05[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:45:06[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:45:06[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:45:06[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:45:06[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:45:06[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:45:06[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:45:06[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1891 ms
+INFO  21-05-05 21:45:06[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:45:06[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 21:45:06[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:45:06[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:45:06[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:45:06[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:45:06[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:45:06[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 2 msec}
+INFO  21-05-05 21:45:07[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:45:07[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-05-05 21:45:07[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+WARN  21-05-05 21:45:08[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:45:08[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:45:08[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:45:09[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:45:09[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:45:09[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:45:09[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 5.385 seconds (JVM running for 6.194)
+INFO  21-05-05 21:45:09[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:45:09[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:45:09[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 21:46:33[RMI TCP Connection(3)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:46:33[RMI TCP Connection(3)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:46:33[RMI TCP Connection(3)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:46:33[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:46:33[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:46:35[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 80240 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:46:35[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:46:35[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:46:35[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:46:35[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:46:35[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:46:36[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:46:36[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:46:36[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:46:36[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:46:36[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:46:36[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:46:36[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:46:36[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1592 ms
+INFO  21-05-05 21:46:36[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:46:36[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 21:46:36[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:46:36[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:46:36[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:46:37[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:46:37[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:46:37[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 1 msec}
+INFO  21-05-05 21:46:37[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:46:37[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:46:38[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:46:38[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:46:38[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:46:38[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:46:38[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:46:38[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:46:38[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.246 seconds (JVM running for 5.049)
+INFO  21-05-05 21:46:42[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:46:42[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:46:42[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 21:48:36[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:48:36[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:48:36[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:48:36[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:48:36[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:48:38[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 80487 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:48:38[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:48:38[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:48:38[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:48:39[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:48:39[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:48:39[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:48:40[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:48:40[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:48:40[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:48:40[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:48:40[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:48:40[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:48:40[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1690 ms
+INFO  21-05-05 21:48:40[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:48:40[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 21:48:40[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:48:40[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:48:40[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:48:40[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:48:40[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:48:40[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 2 msec}
+INFO  21-05-05 21:48:41[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:48:41[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+DEBUG 21-05-05 21:48:41[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+WARN  21-05-05 21:48:42[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:48:42[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:48:42[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:48:42[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:48:42[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:48:42[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:48:42[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.339 seconds (JVM running for 5.175)
+INFO  21-05-05 21:48:46[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:48:46[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:48:46[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+INFO  21-05-05 21:55:37[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:55:37[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:55:37[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:55:37[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:55:37[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:55:39[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 81315 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:55:39[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:55:39[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:55:39[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:55:41[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:55:41[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:55:41[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:55:41[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:55:41[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:55:41[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:55:41[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:55:42[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:55:42[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:55:42[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2041 ms
+INFO  21-05-05 21:55:42[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:55:42[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 21:55:42[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:55:42[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:55:42[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:55:42[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:55:42[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:55:42[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 5 msec}
+INFO  21-05-05 21:55:43[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:55:43[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:55:43[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:55:43[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:55:43[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:55:44[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:55:44[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:55:44[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:55:44[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.941 seconds (JVM running for 5.965)
+INFO  21-05-05 21:55:45[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:55:45[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:55:45[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 21:56:33[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:56:33[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:56:33[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:56:33[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:56:33[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:56:35[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 81422 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:56:35[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:56:35[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:56:35[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:56:36[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:56:36[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:56:36[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:56:36[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:56:37[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:56:37[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:56:37[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:56:37[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:56:37[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:56:37[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1705 ms
+INFO  21-05-05 21:56:37[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:56:37[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-05 21:56:37[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:56:37[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:56:37[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:56:37[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:56:38[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:56:38[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 1 msec}
+INFO  21-05-05 21:56:38[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:56:38[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:56:39[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:56:39[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:56:39[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:56:39[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:56:39[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:56:39[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:56:39[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.85 seconds (JVM running for 5.571)
+INFO  21-05-05 21:58:16[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:58:16[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:58:16[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 21:58:28[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:58:28[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:58:28[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:58:28[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:58:28[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:58:30[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 81650 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:58:30[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:58:30[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:58:30[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:58:31[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:58:31[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:58:31[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:58:31[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:58:31[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:58:31[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:58:31[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:58:31[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:58:31[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:58:31[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1573 ms
+INFO  21-05-05 21:58:32[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:58:32[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 21:58:32[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:58:32[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:58:32[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:58:32[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-05 21:58:32[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:58:32[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 2 msec}
+INFO  21-05-05 21:58:33[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:58:33[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:58:33[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:58:33[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:58:33[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:58:34[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:58:34[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:58:34[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:58:34[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.347 seconds (JVM running for 5.028)
+INFO  21-05-05 21:58:35[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:58:35[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:58:35[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+INFO  21-05-05 21:59:47[RMI TCP Connection(5)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 21:59:47[RMI TCP Connection(5)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:59:47[RMI TCP Connection(5)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 21:59:47[RMI TCP Connection(5)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 21:59:47[RMI TCP Connection(5)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-05 21:59:49[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 81807 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-05 21:59:49[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-05 21:59:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-05 21:59:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-05 21:59:50[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-05 21:59:50[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interfaces.
+DEBUG 21-05-05 21:59:51[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-05 21:59:51[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-05 21:59:51[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:59:51[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-05 21:59:51[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-05 21:59:52[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-05 21:59:52[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-05 21:59:52[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2361 ms
+INFO  21-05-05 21:59:52[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-05 21:59:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 21:59:52[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-05 21:59:52[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-05 21:59:52[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-05 21:59:53[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+DEBUG 21-05-05 21:59:53[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-05 21:59:53[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+DEBUG 21-05-05 21:59:53[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+1. select table_name from information_schema.TABLES where table_schema = database() and table_type = 'SEQUENCE'
+ {executed in 2 msec}
+INFO  21-05-05 21:59:53[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-05 21:59:53[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-05-05 21:59:54[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-05 21:59:54[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 21:59:54[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-05 21:59:54[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-05-05 21:59:54[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-05 21:59:54[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-05 21:59:54[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 5.497 seconds (JVM running for 6.291)
+INFO  21-05-05 21:59:55[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-05 21:59:55[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-05 21:59:55[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  21-05-05 22:00:20[RMI TCP Connection(3)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-05 22:00:20[RMI TCP Connection(3)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-05 22:00:20[RMI TCP Connection(3)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-05 22:00:20[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-05 22:00:20[RMI TCP Connection(3)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

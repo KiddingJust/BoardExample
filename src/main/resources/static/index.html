@@ -1,0 +1,41 @@
+<!-- 
+Spring Boot 프로젝트는 별도의 커스터마이징이 없는 겨우 정적 리소스의 위치는 다음과 같다. 
+static
+public
+resources
+META-INF/resources
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$.ajax({
+			type: "GET",
+			url: "/valueTest",
+			success: (data) => {
+				console.log(data);
+				$('#contents').html(data);	//id contents 쪽에 data 넣겠습니다. 
+			}
+		});
+		
+		$.ajax({
+			type: "GET",
+			url: "/valueTestRest",
+			success: (data) => {
+				console.log(data);
+				$('#restcontents').html(data);	//id contents 쪽에 data 넣겠습니다. 
+			}
+		});		
+	</script>
+
+<body>
+	<h1>Hello World!</h1>
+	<div id="contents">
+	</div>
+	<div id="restcontents">
+	</div>
+</body>
+</html>

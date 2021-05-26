@@ -1,0 +1,7 @@
+WARN  21-05-16 19:25:31[HikariPool-4 housekeeper] [HikariPool:787] - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1d1h6m4s860ms).
+WARN  21-05-16 19:41:26[HikariPool-4 housekeeper] [HikariPool:779] - HikariPool-4 - Retrograde clock change detected (housekeeper delta=24s113ms), soft-evicting connections from pool.
+INFO  21-05-16 20:28:53[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-16 20:28:53[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-16 20:28:53[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-16 20:28:53[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-4 - Shutdown initiated...
+INFO  21-05-16 20:28:53[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-4 - Shutdown completed.

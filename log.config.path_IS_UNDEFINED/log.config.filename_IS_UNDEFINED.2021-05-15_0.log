@@ -1,0 +1,1673 @@
+INFO  21-05-15 13:12:59[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:12:59[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:12:59[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-15 13:12:59[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-15 13:13:01[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:13:01[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+DEBUG 21-05-15 13:13:01[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-15 13:13:02[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:13:02[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:13:02[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:13:02[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:13:02[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:13:02[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:13:02[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 2619 ms
+INFO  21-05-15 13:13:02[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:13:02[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-15 13:13:03[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-15 13:13:03[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-15 13:13:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 1 msec}
+INFO  21-05-15 13:13:03[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-15 13:13:03[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:13:04[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:04[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. drop table if exists board
+ {executed in 39 msec}
+DEBUG 21-05-15 13:13:04[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:13:04[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 22 msec}
+DEBUG 21-05-15 13:13:04[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 9 msec}
+INFO  21-05-15 13:13:04[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:13:04[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:13:04[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:13:05[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:13:05[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:13:05[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:13:05[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:13:05[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:13:05[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 6.817 seconds (JVM running for 8.509)
+INFO  21-05-15 13:13:07[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-15 13:13:07[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-15 13:13:07[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-05-15 13:13:07[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:07[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 9 msec}
+DEBUG 21-05-15 13:13:07[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:11[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:11[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:11.930', '05/15/2021 13:13:11.930', '1', '1', '1')
+ {executed in 2 msec}
+DEBUG 21-05-15 13:13:11[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:11.930', '05/15/2021 13:13:11.930', '1', '1', '1')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:12[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:12[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:14[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:14[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:14.424', '05/15/2021 13:13:14.424', '2', '2', '2')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:14[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:14.424', '05/15/2021 13:13:14.424', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:14[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:14[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:16[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:16[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:16.765', '05/15/2021 13:13:16.765', '3', '3', '3')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:16[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:16.765', '05/15/2021 13:13:16.765', '3', '3', '3')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:16[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:16[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:18.948', '05/15/2021 13:13:18.948', '4', '4', '4')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:18.948', '05/15/2021 13:13:18.948', '4', '4', '4')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:18[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:21.165', '05/15/2021 13:13:21.165', '5', '5', '5')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:21.165', '05/15/2021 13:13:21.165', '5', '5', '5')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:21[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:23.419', '05/15/2021 13:13:23.419', '6', '6', '6')
+ {executed in 2 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:23.419', '05/15/2021 13:13:23.419', '6', '6', '6')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:23[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:26.548', '05/15/2021 13:13:26.548', '7', '7', '7')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:26.548', '05/15/2021 13:13:26.548', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:26[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:29.780', '05/15/2021 13:13:29.780', '8', '8', '88')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:29.780', '05/15/2021 13:13:29.780', '8', '8', '88')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:33.294', '05/15/2021 13:13:33.294', '9', '9', '9')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:33.294', '05/15/2021 13:13:33.294', '9', '9', '9')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:33[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:37.924', '05/15/2021 13:13:37.924', '10', '10', '10')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:37.924', '05/15/2021 13:13:37.924', '10', '10', '10')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:37[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:42.203', '05/15/2021 13:13:42.203', '1', '10', '11')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:42.203', '05/15/2021 13:13:42.203', '1', '10', '11')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:42[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:44.153', '05/15/2021 13:13:44.153', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:44.153', '05/15/2021 13:13:44.153', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:44[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:47.059', '05/15/2021 13:13:47.059', '3', '3', '3')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:47.059', '05/15/2021 13:13:47.059', '3', '3', '3')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:47[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:49.228', '05/15/2021 13:13:49.228', '4', '4', '4')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:13:49.228', '05/15/2021 13:13:49.228', '4', '4', '4')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:49[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:52[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:52[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:52[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:52[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:59[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:59[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 8, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:13:59[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:13:59[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:14:39[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:14:39[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:14:39[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:14:39[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:14:56[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:14:56[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:14:56[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+INFO  21-05-15 13:21:27[Thread-6] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:21:27[Thread-6] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:21:27[Thread-6] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-15 13:21:27[Thread-6] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-15 13:21:27[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:21:27[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:21:27[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:21:27[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:21:28[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:21:28[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:21:28[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:21:28[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:21:28[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:21:28[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:21:28[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 370 ms
+INFO  21-05-15 13:21:28[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:21:28[restartedMain] [HikariDataSource:110] - HikariPool-2 - Starting...
+DEBUG 21-05-15 13:21:28[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+11. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:21:28[restartedMain] [HikariDataSource:123] - HikariPool-2 - Start completed.
+INFO  21-05-15 13:21:28[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:21:28[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:21:28[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:21:28[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 17 msec}
+DEBUG 21-05-15 13:21:28[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 9 msec}
+INFO  21-05-15 13:21:28[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:21:28[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:21:28[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:21:28[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:21:28[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:21:28[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:21:28[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:21:28[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:21:28[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.895 seconds (JVM running for 511.286)
+INFO  21-05-15 13:21:28[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:21:43[Thread-10] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:21:43[Thread-10] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:21:43[Thread-10] [HikariDataSource:350] - HikariPool-2 - Shutdown initiated...
+INFO  21-05-15 13:21:43[Thread-10] [HikariDataSource:352] - HikariPool-2 - Shutdown completed.
+INFO  21-05-15 13:21:43[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:21:43[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:21:43[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:21:43[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:21:43[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:21:43[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:21:43[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:21:43[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:21:43[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:21:43[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:21:43[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 423 ms
+INFO  21-05-15 13:21:43[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:21:43[restartedMain] [HikariDataSource:110] - HikariPool-3 - Starting...
+DEBUG 21-05-15 13:21:43[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+21. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:21:43[restartedMain] [HikariDataSource:123] - HikariPool-3 - Start completed.
+INFO  21-05-15 13:21:43[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:21:43[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. drop table if exists board
+ {executed in 3 msec}
+DEBUG 21-05-15 13:21:43[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. drop table if exists member
+ {executed in 3 msec}
+DEBUG 21-05-15 13:21:43[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 10 msec}
+DEBUG 21-05-15 13:21:44[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 7 msec}
+INFO  21-05-15 13:21:44[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:21:44[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:21:44[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:21:44[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:21:44[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:21:44[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:21:44[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:21:44[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:21:44[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.889 seconds (JVM running for 526.948)
+INFO  21-05-15 13:21:44[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:22:48[Thread-15] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:22:48[Thread-15] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:22:48[Thread-15] [HikariDataSource:350] - HikariPool-3 - Shutdown initiated...
+INFO  21-05-15 13:22:48[Thread-15] [HikariDataSource:352] - HikariPool-3 - Shutdown completed.
+INFO  21-05-15 13:22:48[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:22:48[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:22:48[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:22:48[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:22:48[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:22:48[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:22:48[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:22:48[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:22:48[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:22:48[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:22:48[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 307 ms
+INFO  21-05-15 13:22:48[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:22:48[restartedMain] [HikariDataSource:110] - HikariPool-4 - Starting...
+DEBUG 21-05-15 13:22:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+31. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:22:48[restartedMain] [HikariDataSource:123] - HikariPool-4 - Start completed.
+INFO  21-05-15 13:22:48[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:22:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:22:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:22:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 15 msec}
+DEBUG 21-05-15 13:22:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 11 msec}
+INFO  21-05-15 13:22:48[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:22:48[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:22:48[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:22:49[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:22:49[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:22:49[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:22:49[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:22:49[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:22:49[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.732 seconds (JVM running for 591.867)
+INFO  21-05-15 13:22:49[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:23:50[Thread-20] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:23:50[Thread-20] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:23:50[Thread-20] [HikariDataSource:350] - HikariPool-4 - Shutdown initiated...
+INFO  21-05-15 13:23:50[Thread-20] [HikariDataSource:352] - HikariPool-4 - Shutdown completed.
+INFO  21-05-15 13:23:50[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:23:50[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:23:50[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:23:50[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:23:50[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:23:50[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:23:50[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:23:50[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:23:50[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:23:50[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:23:50[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 285 ms
+INFO  21-05-15 13:23:50[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:23:50[restartedMain] [HikariDataSource:110] - HikariPool-5 - Starting...
+DEBUG 21-05-15 13:23:50[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+41. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:23:50[restartedMain] [HikariDataSource:123] - HikariPool-5 - Start completed.
+INFO  21-05-15 13:23:50[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:23:50[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+41. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:23:50[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+41. drop table if exists member
+ {executed in 1 msec}
+DEBUG 21-05-15 13:23:50[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+41. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 13 msec}
+DEBUG 21-05-15 13:23:50[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+41. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 8 msec}
+INFO  21-05-15 13:23:50[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:23:50[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:23:50[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:23:50[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:23:50[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:23:50[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:23:51[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:23:51[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:23:51[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.707 seconds (JVM running for 653.677)
+INFO  21-05-15 13:23:51[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:24:47[Thread-25] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:24:47[Thread-25] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:24:47[Thread-25] [HikariDataSource:350] - HikariPool-5 - Shutdown initiated...
+INFO  21-05-15 13:24:47[Thread-25] [HikariDataSource:352] - HikariPool-5 - Shutdown completed.
+INFO  21-05-15 13:24:48[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:24:48[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:24:48[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:24:48[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:24:48[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:24:48[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:24:48[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:24:48[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:24:48[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:24:48[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:24:48[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 336 ms
+INFO  21-05-15 13:24:48[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:24:48[restartedMain] [HikariDataSource:110] - HikariPool-6 - Starting...
+DEBUG 21-05-15 13:24:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+51. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:24:48[restartedMain] [HikariDataSource:123] - HikariPool-6 - Start completed.
+INFO  21-05-15 13:24:48[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:24:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+51. drop table if exists board
+ {executed in 4 msec}
+DEBUG 21-05-15 13:24:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+51. drop table if exists member
+ {executed in 1 msec}
+DEBUG 21-05-15 13:24:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+51. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 12 msec}
+DEBUG 21-05-15 13:24:48[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+51. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 9 msec}
+INFO  21-05-15 13:24:48[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:24:48[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:24:48[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:24:48[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:24:48[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:24:48[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:24:48[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:24:48[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:24:48[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.775 seconds (JVM running for 711.459)
+INFO  21-05-15 13:24:48[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:25:02[Thread-30] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:02[Thread-30] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:02[Thread-30] [HikariDataSource:350] - HikariPool-6 - Shutdown initiated...
+INFO  21-05-15 13:25:02[Thread-30] [HikariDataSource:352] - HikariPool-6 - Shutdown completed.
+INFO  21-05-15 13:25:02[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:25:02[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:25:02[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:25:02[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:25:03[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:25:03[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:03[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:25:03[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:25:03[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:25:03[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:25:03[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 337 ms
+INFO  21-05-15 13:25:03[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:25:03[restartedMain] [HikariDataSource:110] - HikariPool-7 - Starting...
+DEBUG 21-05-15 13:25:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+61. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:25:03[restartedMain] [HikariDataSource:123] - HikariPool-7 - Start completed.
+INFO  21-05-15 13:25:03[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:25:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+61. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+61. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+61. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 11 msec}
+DEBUG 21-05-15 13:25:03[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+61. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 8 msec}
+INFO  21-05-15 13:25:03[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:25:03[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:03[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:25:03[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:25:03[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:03[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:25:03[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:03[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:25:03[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.856 seconds (JVM running for 726.189)
+INFO  21-05-15 13:25:03[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:25:04[Thread-35] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:04[Thread-35] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:04[Thread-35] [HikariDataSource:350] - HikariPool-7 - Shutdown initiated...
+INFO  21-05-15 13:25:04[Thread-35] [HikariDataSource:352] - HikariPool-7 - Shutdown completed.
+INFO  21-05-15 13:25:05[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:25:05[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:25:05[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:25:05[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:25:05[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:25:05[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:05[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:25:05[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:25:05[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:25:05[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:25:05[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 377 ms
+INFO  21-05-15 13:25:05[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:25:05[restartedMain] [HikariDataSource:110] - HikariPool-8 - Starting...
+DEBUG 21-05-15 13:25:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+71. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:25:05[restartedMain] [HikariDataSource:123] - HikariPool-8 - Start completed.
+INFO  21-05-15 13:25:05[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:25:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+71. drop table if exists board
+ {executed in 4 msec}
+DEBUG 21-05-15 13:25:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+71. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+71. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 11 msec}
+DEBUG 21-05-15 13:25:05[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+71. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 8 msec}
+INFO  21-05-15 13:25:05[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:25:05[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:05[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:25:05[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:25:05[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:05[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:25:06[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:06[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:25:06[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.937 seconds (JVM running for 728.673)
+INFO  21-05-15 13:25:06[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:25:07[Thread-40] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:07[Thread-40] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:07[Thread-40] [HikariDataSource:350] - HikariPool-8 - Shutdown initiated...
+INFO  21-05-15 13:25:07[Thread-40] [HikariDataSource:352] - HikariPool-8 - Shutdown completed.
+INFO  21-05-15 13:25:07[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 21137 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:25:07[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:25:07[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:25:07[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:25:07[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:25:07[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:07[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:25:07[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:25:07[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:25:07[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:25:07[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 275 ms
+INFO  21-05-15 13:25:08[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:25:08[restartedMain] [HikariDataSource:110] - HikariPool-9 - Starting...
+DEBUG 21-05-15 13:25:08[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+81. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:25:08[restartedMain] [HikariDataSource:123] - HikariPool-9 - Start completed.
+INFO  21-05-15 13:25:08[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:25:08[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+81. drop table if exists board
+ {executed in 3 msec}
+DEBUG 21-05-15 13:25:08[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+81. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:08[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+81. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 15 msec}
+DEBUG 21-05-15 13:25:08[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+81. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 13 msec}
+INFO  21-05-15 13:25:08[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:25:08[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:08[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:25:08[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:25:08[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:08[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:25:08[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:08[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:25:08[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.759 seconds (JVM running for 731.062)
+INFO  21-05-15 13:25:08[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:25:19[RMI TCP Connection(4)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-05-15 13:25:19[RMI TCP Connection(4)-127.0.0.1] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:19[RMI TCP Connection(4)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:19[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:350] - HikariPool-9 - Shutdown initiated...
+INFO  21-05-15 13:25:19[RMI TCP Connection(4)-127.0.0.1] [HikariDataSource:352] - HikariPool-9 - Shutdown completed.
+INFO  21-05-15 13:25:21[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 22585 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:25:21[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:25:21[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-05-15 13:25:21[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-05-15 13:25:22[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:25:22[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+DEBUG 21-05-15 13:25:22[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-05-15 13:25:22[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:25:22[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:22[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:25:22[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:25:23[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:25:23[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:25:23[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1625 ms
+INFO  21-05-15 13:25:23[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:25:23[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.30.Final
+INFO  21-05-15 13:25:23[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-05-15 13:25:23[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+DEBUG 21-05-15 13:25:23[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+1. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:25:23[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-05-15 13:25:23[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:25:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:25:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:25:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 11 msec}
+DEBUG 21-05-15 13:25:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+1. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 11 msec}
+INFO  21-05-15 13:25:24[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:25:24[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:25:24[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:25:24[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:25:25[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:25:25[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:25:25[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:25:25[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:25:25[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 4.661 seconds (JVM running for 5.442)
+INFO  21-05-15 13:29:55[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-05-15 13:29:55[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-05-15 13:29:55[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-05-15 13:29:58[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:29:58[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:29:58.466', '05/15/2021 13:29:58.466', '1', '1', '1')
+ {executed in 2 msec}
+DEBUG 21-05-15 13:29:58[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:29:58.466', '05/15/2021 13:29:58.466', '1', '1', '1')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:29:58[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:29:58[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:01[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:01[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:01.900', '05/15/2021 13:30:01.900', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:01[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:01.900', '05/15/2021 13:30:01.900', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:01[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:01[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:04[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:04[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:04.116', '05/15/2021 13:30:04.116', '3', '3', '3')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:04[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:04.116', '05/15/2021 13:30:04.116', '3', '3', '3')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:04[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:04[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:06.531', '05/15/2021 13:30:06.531', '4', '4', '4')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:06.531', '05/15/2021 13:30:06.531', '4', '4', '4')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:06[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:08.874', '05/15/2021 13:30:08.874', '5', '5', '5')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:08.874', '05/15/2021 13:30:08.874', '5', '5', '5')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:08[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:11.360', '05/15/2021 13:30:11.360', '6', '6', '6')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:11.360', '05/15/2021 13:30:11.360', '6', '6', '6')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:11[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:14.291', '05/15/2021 13:30:14.291', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:14.291', '05/15/2021 13:30:14.291', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:14[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:17.451', '05/15/2021 13:30:17.451', '8', '8', '8')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:17.451', '05/15/2021 13:30:17.451', '8', '8', '8')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:20.643', '05/15/2021 13:30:20.643', '9', '9', '9')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:20.643', '05/15/2021 13:30:20.643', '9', '9', '9')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:20[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:23.910', '05/15/2021 13:30:23.910', '10', '10', '10')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:23.910', '05/15/2021 13:30:23.910', '10', '10', '10')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:23[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:27.591', '05/15/2021 13:30:27.591', '1', '1', '1')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:27.591', '05/15/2021 13:30:27.591', '1', '1', '1')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:27[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:30.299', '05/15/2021 13:30:30.299', '2', '2', '2')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:30.299', '05/15/2021 13:30:30.299', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:30[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:33.755', '05/15/2021 13:30:33.755', '3', '3', '3')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:33.755', '05/15/2021 13:30:33.755', '3', '3', '3')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:33[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 2 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:36.343', '05/15/2021 13:30:36.343', '4', '4', '4')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:36.343', '05/15/2021 13:30:36.343', '4', '4', '4')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:36[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:39.616', '05/15/2021 13:30:39.616', '', '5', '5')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:39.616', '05/15/2021 13:30:39.616', '', '5', '5')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:39[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:42.193', '05/15/2021 13:30:42.193', '', '6', '6')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:42.193', '05/15/2021 13:30:42.193', '', '6', '6')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:42[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:43[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:43[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:43[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 2 msec}
+DEBUG 21-05-15 13:30:43[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:44[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:44[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:44[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:44[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:45[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:45[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 8, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:45[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:45[http-nio-8080-exec-9] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:46[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:50.254', '05/15/2021 13:30:50.254', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:50.254', '05/15/2021 13:30:50.254', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:50[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:52.622', '05/15/2021 13:30:52.622', '8', '8', '8')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:52.622', '05/15/2021 13:30:52.622', '8', '8', '8')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:52[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:54[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:54[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 16, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:54[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 2 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:59.376', '05/15/2021 13:30:59.376', '9', '9', '9')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:30:59.376', '05/15/2021 13:30:59.376', '9', '9', '9')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:30:59[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:08.696', '05/15/2021 13:31:08.696', '1', '1', '1')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:08.696', '05/15/2021 13:31:08.696', '1', '1', '1')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:08[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:10[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:10[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 8, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:10[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:10[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:12[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:12[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:12[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:12[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:13[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:13[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 16, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:13[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:13[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:17.172', '05/15/2021 13:31:17.172', '1', '1', '10')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:17.172', '05/15/2021 13:31:17.172', '1', '1', '10')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:17[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:21.878', '05/15/2021 13:31:21.878', '2', '2', '2')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-5] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:21.878', '05/15/2021 13:31:21.878', '2', '2', '2')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:21[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:23[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:24[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:24[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 16, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:24[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:24[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:29.256', '05/15/2021 13:31:29.256', '7', '7', '7')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-3] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:29.256', '05/15/2021 13:31:29.256', '7', '7', '7')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:29[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:32.554', '05/15/2021 13:31:32.554', '8', '8', '8')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-7] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:32.554', '05/15/2021 13:31:32.554', '8', '8', '8')
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:32[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+1. /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:35.545', '05/15/2021 13:31:35.545', '9', '9', '9')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-1] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:230)
+1. getGeneratedKeys on query: /* insert org.gaiga.domain.entity.Board */ insert into board (created_date, modified_date, content, title, writer) values ('05/15/2021 13:31:35.545', '05/15/2021 13:31:35.545', '9', '9', '9')
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:35[http-nio-8080-exec-2] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 16, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:36[http-nio-8080-exec-4] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:37[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:37[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 24, 4
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:37[http-nio-8080-exec-6] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 20, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-8] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:169)
+1. SELECT 1
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select generatedAlias0 from Board as generatedAlias0 order by generatedAlias0.createdDate desc */ select board0_.id as id1_0_, board0_.created_date as created_2_0_, board0_.modified_date as modified3_0_, board0_.content as content4_0_, board0_.title as title5_0_, board0_.writer as writer6_0_ from board board0_ order by board0_.created_date desc limit 12, 4
+ {executed in 1 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(generatedAlias0) from Board as generatedAlias0 */ select count(board0_.id) as col_0_0_ from board board0_
+ {executed in 0 msec}
+DEBUG 21-05-15 13:31:38[http-nio-8080-exec-10] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+1. /* select count(*) from Board x */ select count(*) as col_0_0_ from board board0_
+ {executed in 0 msec}
+INFO  21-05-15 13:41:58[Thread-6] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:41:58[Thread-6] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:41:59[Thread-6] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-05-15 13:41:59[Thread-6] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-05-15 13:41:59[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 22585 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:41:59[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:41:59[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:41:59[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:41:59[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:41:59[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:41:59[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:41:59[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:41:59[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:41:59[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:41:59[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 462 ms
+INFO  21-05-15 13:41:59[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:41:59[restartedMain] [HikariDataSource:110] - HikariPool-2 - Starting...
+DEBUG 21-05-15 13:41:59[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+11. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:41:59[restartedMain] [HikariDataSource:123] - HikariPool-2 - Start completed.
+INFO  21-05-15 13:41:59[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:42:00[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:42:00[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:42:00[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 11 msec}
+DEBUG 21-05-15 13:42:00[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+11. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 14 msec}
+INFO  21-05-15 13:42:00[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:42:00[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:42:00[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:42:00[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:42:00[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:42:00[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:42:00[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:42:00[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:42:00[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 1.088 seconds (JVM running for 1000.402)
+INFO  21-05-15 13:42:00[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:43:23[Thread-10] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:43:23[Thread-10] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:43:23[Thread-10] [HikariDataSource:350] - HikariPool-2 - Shutdown initiated...
+INFO  21-05-15 13:43:23[Thread-10] [HikariDataSource:352] - HikariPool-2 - Shutdown completed.
+INFO  21-05-15 13:43:23[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 22585 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:43:23[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:43:23[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:43:23[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:43:24[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:43:24[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:43:24[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:43:24[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:43:24[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:43:24[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:43:24[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 392 ms
+INFO  21-05-15 13:43:24[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:43:24[restartedMain] [HikariDataSource:110] - HikariPool-3 - Starting...
+DEBUG 21-05-15 13:43:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+21. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:43:24[restartedMain] [HikariDataSource:123] - HikariPool-3 - Start completed.
+INFO  21-05-15 13:43:24[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:43:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. drop table if exists board
+ {executed in 1 msec}
+DEBUG 21-05-15 13:43:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:43:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 9 msec}
+DEBUG 21-05-15 13:43:24[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+21. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 9 msec}
+INFO  21-05-15 13:43:24[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:43:24[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:43:24[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:43:24[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:43:24[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:43:24[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:43:24[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:43:24[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:43:24[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.866 seconds (JVM running for 1084.64)
+INFO  21-05-15 13:43:24[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-05-15 13:43:52[Thread-15] [ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:43:52[Thread-15] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:43:52[Thread-15] [HikariDataSource:350] - HikariPool-3 - Shutdown initiated...
+INFO  21-05-15 13:43:52[Thread-15] [HikariDataSource:352] - HikariPool-3 - Shutdown completed.
+INFO  21-05-15 13:43:52[restartedMain] [BoardExampleApplication:55] - Starting BoardExampleApplication using Java 1.8.0_191 on kiddingui-MacBook-Pro.local with PID 22585 (/Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample/target/classes started by kidding in /Users/kidding/Documents/workspace-spring-tool-suite-4-4.6.1.RELEASE/boardExample)
+INFO  21-05-15 13:43:52[restartedMain] [BoardExampleApplication:675] - No active profile set, falling back to default profiles: default
+INFO  21-05-15 13:43:52[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-05-15 13:43:52[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+INFO  21-05-15 13:43:52[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-05-15 13:43:52[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:43:52[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-05-15 13:43:52[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.45]
+INFO  21-05-15 13:43:52[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-05-15 13:43:52[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-05-15 13:43:52[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 306 ms
+INFO  21-05-15 13:43:52[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-05-15 13:43:52[restartedMain] [HikariDataSource:110] - HikariPool-4 - Starting...
+DEBUG 21-05-15 13:43:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+31. SELECT 1
+ {executed in 0 msec}
+INFO  21-05-15 13:43:52[restartedMain] [HikariDataSource:123] - HikariPool-4 - Start completed.
+INFO  21-05-15 13:43:52[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDBDialect
+DEBUG 21-05-15 13:43:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. drop table if exists board
+ {executed in 2 msec}
+DEBUG 21-05-15 13:43:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. drop table if exists member
+ {executed in 2 msec}
+DEBUG 21-05-15 13:43:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. create table board (
+       id bigint not null auto_increment,
+        created_date datetime,
+        modified_date datetime,
+        content TEXT not null,
+        title varchar(100) not null,
+        writer varchar(10) not null,
+        primary key (id)
+    ) engine=InnoDB
+ {executed in 14 msec}
+DEBUG 21-05-15 13:43:52[restartedMain] [sqltiming:368] -  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+31. create table member (
+       mbr_no bigint not null auto_increment,
+        id varchar(255),
+        name varchar(255),
+        primary key (mbr_no)
+    ) engine=InnoDB
+ {executed in 7 msec}
+INFO  21-05-15 13:43:52[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-05-15 13:43:52[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-05-15 13:43:53[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+WARN  21-05-15 13:43:53[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-05-15 13:43:53[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-05-15 13:43:53[restartedMain] [WelcomePageHandlerMapping:53] - Adding welcome page: class path resource [static/index.html]
+INFO  21-05-15 13:43:53[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-05-15 13:43:53[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-05-15 13:43:53[restartedMain] [BoardExampleApplication:61] - Started BoardExampleApplication in 0.785 seconds (JVM running for 1113.294)
+INFO  21-05-15 13:43:53[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+WARN  21-05-15 14:09:52[HikariPool-4 housekeeper] [HikariPool:787] - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=15m29s776ms).
+WARN  21-05-15 17:34:16[HikariPool-4 housekeeper] [HikariPool:787] - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=3h24m23s439ms).
+WARN  21-05-15 18:19:26[HikariPool-4 housekeeper] [HikariPool:787] - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=44m39s730ms).
